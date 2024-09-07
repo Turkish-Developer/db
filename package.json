@@ -1,0 +1,32 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/mjs/index.js",
+  "types": "./dist/typings/index.d.ts",
+  "scripts": {
+    "dev": "nodemon --watch ./src -e ts --exec 'npm run start' ",
+    "start": "clear&&cd src&&node --no-warnings=ExperimentalWarning --loader ts-node/esm index.ts",
+    "build": "tsc --project tsconfig.json & tsc --project tsconfig.mjs.json "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SeneSatka/djs-pagination/tree/main"
+  },
+  "keywords": [],
+  "author": "SeneSatka",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "@types/yaml": "^1.9.6",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@chocolatemilkdev/emitter": "^1.0.7",
+    "bson-ext": "^4.0.3",
+    "yaml": "^2.5.1"
+  }
+}
